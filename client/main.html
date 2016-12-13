@@ -1,0 +1,21 @@
+<head>
+  <title>NBA-App</title>
+</head>
+
+ <body>{{>index}}
+</body>
+
+
+<template name="test">
+    {{>index}}
+</template>
+
+<template name="index">
+  <form id="btn">
+    <input type="submit" id="" value="ENVOYER LE JOUEURZER">
+  </form>
+  <a href="#" id="deletebtn">SUPPRIMER CETTE MERDE</a>
+    {{#each Players}}
+    {{name}}
+    {{/each}}
+</template>
