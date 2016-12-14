@@ -9,10 +9,10 @@
 
 ## Liste des packages installés
 
-twbs:bootstrap
-http
-peerlibrary:xml2js
-iron:router
-accounts-ui
-accounts-password
-session
+- twbs:bootstrap
+- http
+- peerlibrary:xml2js
+- iron:router
+- accounts-ui
+- accounts-password
+- session
