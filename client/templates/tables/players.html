@@ -1,0 +1,23 @@
+<template name="playersTable">
+  <h2>Joueurs de BOS</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>nom</th>
+        <th>position</th>
+        <th>actions</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {{ #each teamPlayers }}
+      <tr>
+        <td>{{ name }}</td>
+        <td>{{ position }}</td>
+        <td><a href="#" id="add-my-player" class="btn btn-default"> Ajouter ce joueur à mes joueurs</a></td>
+      </tr>
+      {{ /each }}
+
+    </tbody>
+  </table>
+</template>

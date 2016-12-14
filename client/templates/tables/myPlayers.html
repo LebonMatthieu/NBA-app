@@ -1,0 +1,19 @@
+<template name="myPlayersTable">
+  <h2>Mes joueurs</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>nom</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {{ #each myPlayersDatas }}
+      <tr>
+        <td>{{ _id }}</td>
+      </tr>
+      {{ /each }}
+
+    </tbody>
+  </table>
+</template>

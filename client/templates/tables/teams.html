@@ -1,0 +1,26 @@
+<template name="TeamsTable">
+  <h2>Équipes</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>nom</th>
+        <th>division</th>
+        <th>actions</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {{ #each teams }}
+        <tr>
+          <td>{{ name }}</td>
+          <td>{{ code }}</td>
+          <div id="teamHidden">
+            {{ code }}
+          </div>
+          <td><a href="#" id="read-team-btn"> Voir </a></td>
+        </tr>
+        {{ /each }}
+
+    </tbody>
+  </table>
+</template>
