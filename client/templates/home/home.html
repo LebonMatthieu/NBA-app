@@ -1,3 +1,71 @@
 <template name="home">
-  <h1>Page d'accueil</h1>
+  <div class="container">
+    <h2>Page d'acceuil</h2>
+    {{#if currentUser }}
+      Bonjour , {{ currentUser.username }}
+    {{/if}}
+
+
+      {{#if currentUser}}
+      <br>
+        <a href="#" class="logout btn btn-warning">Déconnexion</a>
+      {{else}}
+        <a href="{{pathFor route='register'}}" class="btn btn-primary">S'inscrire</a>
+        <a href="{{pathFor route='login'}}" class="btn btn-success">Se connecter</a>
+      {{/if}}
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Mes joueurs</h2>
+      </div>
+      <div class="col-md-4">
+        <h3>Équipes</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>nom</th>
+              <th>division</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+          <tbody>
+
+              {{ #each teams }}
+              <tr>
+                <td>{{ name }}</td>
+                <td>{{ division }}</td>
+                <td><a href="#" id="delete-team-btn"> delete </a></td>
+              </tr>
+              {{ /each }}
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4">
+        <h2>Joueurs</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>nom</th>
+              <th>position</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+          <tbody>
+
+              {{ #each players }}
+              <tr>
+                <td>{{ name }}</td>
+                <td>{{ position }}</td>
+                <td><a href="#" id="delete-team-btn"> delete </a></td>
+              </tr>
+              {{ /each }}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </template>
