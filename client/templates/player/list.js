@@ -1,10 +1,25 @@
 Template.playersList.helpers({
   players: function(){
     return Players.find();
+  },
+  splitName : function( name ){
+    var splitName = name.split();
+
+    var lastname = String(splitName[0]).toLowerCase();
+    var firstname = String(splitName[1]).toLowerCase();
+
+    return playerName = {
+      lastname : lastname,
+      firstname : firstname,
+    }
   }
 })
 
 Template.playersList.events = {
+  'click .xml-import-players' : function(e){
+    e.preventDefault();
+    Meteor.call("xmlPlayerDatas");
+  },
   'submit #form-insert':function(e){
     e.preventDefault();
 

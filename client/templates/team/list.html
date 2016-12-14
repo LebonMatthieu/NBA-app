@@ -1,9 +1,9 @@
 <template name="teamList">
   {{ #each teams }}
-    {{ team.name }}
-    {{ team.number }}
-    {{ team.city }}
-
+    {{ code }}
+    {{ name }}
+    {{ conference }}
+    {{ division }}
     <a href="#" id="delete-team-btn"> delete </a>
   {{ /each }}
 
@@ -20,4 +20,6 @@
 
     <input type="submit" class="btn btn-primary" name="" value="Add a team">
   </form>
+
+  <a href="" class="xml-import-teams">add teams</a>
 </template>
