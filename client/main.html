@@ -2,20 +2,15 @@
   <title>NBA-App</title>
 </head>
 
- <body>{{>index}}
+ <body>
+   <div class="container">
+     <div class="row">
+       <div class="col-md-6">
+          {{ >playersList }}
+       </div>
+       <div class="col-md-6">
+         {{ >teamList }}
+       </div>
+     </div>
+   </div>
 </body>
-
-
-<template name="test">
-    {{>index}}
-</template>
-
-<template name="index">
-  <form id="btn">
-    <input type="submit" id="" value="ENVOYER LE JOUEURZER">
-  </form>
-  <a href="#" id="deletebtn">SUPPRIMER CETTE MERDE</a>
-    {{#each Players}}
-    {{name}}
-    {{/each}}
-</template>
