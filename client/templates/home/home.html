@@ -1,18 +1,20 @@
 <template name="home">
-  <div class="container">
-    <h2>Page d'acceuil</h2>
-    {{#if currentUser }}
-      Bonjour , {{ currentUser.username }}
+  <div class="container-home">
+  <div class="header-home">
+  <img src="img/basketix_logo_white.png" alt="">
+  {{#if currentUser }}
+    Bonjour {{ currentUser.username }}
+  {{/if}}
+
+
+    {{#if currentUser}}
+    <br>
+      <a href="#" class="logout btn btn-primary">Déconnexion</a>
+    {{else}}
+      <a href="{{pathFor route='register'}}" class="btn btn-primary">S'inscrire</a>
+      <a href="{{pathFor route='login'}}" class="btn btn-success">Se connecter</a>
     {{/if}}
-
-
-      {{#if currentUser}}
-      <br>
-        <a href="#" class="logout btn btn-warning">Déconnexion</a>
-      {{else}}
-        <a href="{{pathFor route='register'}}" class="btn btn-primary">S'inscrire</a>
-        <a href="{{pathFor route='login'}}" class="btn btn-success">Se connecter</a>
-      {{/if}}
+  </div>
   </div>
 
   <div class="container-fluid">
@@ -21,7 +23,7 @@
         <h2>Mes joueurs</h2>
       </div>
       <div class="col-md-4">
-        <h3>Équipes</h3>
+        <h2>Équipes</h2>
         <table class="table table-striped">
           <thead>
             <tr>
