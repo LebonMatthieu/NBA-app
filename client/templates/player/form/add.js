@@ -36,9 +36,5 @@ Template.formAddPlayer.events = {
     }else{
       console.log('empty fields !')
     }
-  },
-  'click .xml-import-players' : function(e){
-    e.preventDefault();
-    Meteor.call("xmlPlayerDatas");
   }
 }

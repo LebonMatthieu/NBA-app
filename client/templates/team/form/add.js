@@ -1,8 +1,4 @@
 Template.formAddTeam.events = {
-  'click .xml-import-teams' : function(e){
-    e.preventDefault();
-    Meteor.call("xmlTeamDatas");
-  },
   'submit #form-insert-team':function(e){
     e.preventDefault();
 
