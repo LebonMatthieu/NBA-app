@@ -22,3 +22,6 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 twbs:bootstrap
 http
 peerlibrary:xml2js
+iron:router
+accounts-ui
+accounts-password
