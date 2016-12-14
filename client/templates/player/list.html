@@ -1,14 +1,38 @@
 <template name="playersList">
-  {{ #each players }}
-    {{ playerId }}
-    {{ name }}
-    {{ team }}
-    {{ position }}
-    {{ height }}
-    {{ weight }}
-    {{ dob }}
-    {{ school }}
+  <div class="container">
+    <h2>Players</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>nom</th>
+          <th>équipe</th>
+          <th>position</th>
+          <th>taille</th>
+          <th>poids</th>
+          <th>date de naissance</th>
+          <th>école</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
 
-    <a href="#" id="delete-btn"> delete </a>
-  {{ /each }}
+        {{ #each players }}
+          <tr>
+            <td>{{ playerId }}</td>
+            <td>{{ name }}</td>
+            <td>{{ team }}</td>
+            <td>{{ position }}</td>
+            <td>{{ height }}</td>
+            <td>{{ weight }}</td>
+            <td>{{ dob }}</td>
+            <td>{{ school }}</td>
+
+            <td><a href="#" id="delete-btn"> delete </a></td>
+          </tr>
+        {{ /each }}
+
+      </tbody>
+    </table>
+  </div>
 </template>

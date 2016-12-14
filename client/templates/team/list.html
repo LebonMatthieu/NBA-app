@@ -1,9 +1,30 @@
 <template name="teamList">
-  {{ #each teams }}
-    {{ code }}
-    {{ name }}
-    {{ conference }}
-    {{ division }}
-    <a href="#" id="delete-team-btn"> delete </a>
-  {{ /each }}
+
+  <div class="container">
+    <h2>Teams</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>code</th>
+          <th>nom</th>
+          <th>conference</th>
+          <th>division</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          {{ #each teams }}
+          <tr>
+            <td>{{ code }}</td>
+            <td>{{ name }}</td>
+            <td>{{ conference }}</td>
+            <td>{{ division }}</td>
+            <td><a href="#" id="delete-team-btn"> delete </a></td>
+          </tr>
+          {{ /each }}
+
+      </tbody>
+    </table>
+  </div>
 </template>
