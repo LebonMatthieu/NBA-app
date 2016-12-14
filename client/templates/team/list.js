@@ -5,10 +5,6 @@ Template.teamList.helpers({
 })
 
 Template.teamList.events = {
-  'click .xml-import-teams' : function(e){
-    e.preventDefault();
-    Meteor.call("xmlTeamDatas");
-  },
   'click #delete-team-btn':function(e){
     e.preventDefault();
     var teamId = this._id;

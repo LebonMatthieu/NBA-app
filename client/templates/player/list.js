@@ -16,10 +16,6 @@ Template.playersList.helpers({
 })
 
 Template.playersList.events = {
-  'click .xml-import-players' : function(e){
-    e.preventDefault();
-    Meteor.call("xmlPlayerDatas");
-  },
   'click #delete-btn':function(e){
     e.preventDefault();
     var playerId = this._id;
